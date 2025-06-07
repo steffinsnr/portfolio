@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steffi Omureka Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="red-black-theme">
+    <header class="site-header">
+      <div class="logo">
+        <img src="images/logo.jpg" alt="Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#work"><i class="fas fa-code"></i> Projects</a></li>
+          <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+          <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+          <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+          <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Hello, I'm Steffi Omureka</h1>
+        <p>Writer | Web Designer | Front-End Developer</p>
+      </div>
+      <img src="images/Graduate.jpg" alt="Steffi Omureka" class="hero-img" />
+    </section>
+
+    <section id="work" class="projects">
+      <div class="projects-card">
+        <img src="images\Screenshot (14).png" alt="To-Do App Screenshot" />
+        <h3>To-Do List App</h3>
+        <p>
+          A responsive and modern To-Do List web application featuring:
+          <ul>
+            <li>Dark Mode toggle</li>
+            <li>Animated strike-through for completed tasks</li>
+            <li>Clear All button</li>
+            <li>Smooth modern UI with background blur</li>
+          </ul>
+        </p>
+        <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+        <a href="https://steffinsnr.github.io/To-do-list/" target="_blank">Live Demo</a>
+        <a href="https://github.com/steffinsnr/To-do-list" target="_blank">Source Code</a>
+      </div>
+    </section>
+
+    <section id="experience" class="experience">
+      <h2>Work Experience</h2>
+      <ul>
+        <li><strong>Gertrude’s Children’s Hospital (2024):</strong> Front desk and patient flow management.</li>
+        <li><strong>Startappz Limited (2023):</strong> Web design intern using Elementor and Canva.</li>
+      </ul>
+    </section>
+
+    <section id="education" class="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>BSc IT</strong> – KCA University (2024 – Present)</li>
+        <li><strong>Diploma in IT</strong> – Kabarak University (2021 – 2023)</li>
+        <li><strong>Certificate in IT</strong> – Kabarak University (2020)</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>React (Beginner)</li>
+        <li>Responsive Web Design</li>
+        <li>Git & GitHub</li>
+      </ul>
+      <div class="skill-progress">
+        <label>HTML & CSS</label>
+        <progress value="85" max="100"></progress>
+        <label>JavaScript</label>
+        <progress value="70" max="100"></progress>
+        <label>React</label>
+        <progress value="60" max="100"></progress>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <h2>Testimonials</h2>
+      <p>"Steffi is a talented developer who always delivers quality work on time."</p>
+      <p>-Stella wambui, Startappz Limited</p>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>
+        I’m Steffi Omureka, a web designer and front-end developer currently pursuing a Bachelor of Science in Information Technology. I specialize in creating responsive, user-friendly websites and enjoy turning ideas into clean, functional digital experiences.
+      </p>
+      <a href="images/STEFFI'S CV1 (1).pdf" download class="download-cv-button">
+        <i class="fas fa-download"></i> Download CV
+      </a>
+      <a href="https://www.linkedin.com/in/steffi-omureka-50" target="_blank" class="linkedin-link">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>
+        Email me at: <a href="mailto:nrosesteffi@gmail.com">nrosesteffi@gmail.com</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Steffi Omureka. All rights reserved.</p>
+    </footer>
+    
+    <!-- Dark Mode and Clear All Buttons -->
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <button id="clear-all-btn">Clear All Tasks</button>
+    
+    
+  </body>
+</html>

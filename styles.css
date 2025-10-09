@@ -82,7 +82,7 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 .techs { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
 .tech { 
   display: flex; align-items: center; justify-content: center; 
-  height: 20px; 
+  height: 80; 
   background: linear-gradient(145deg, #111, #1f1f1f); 
   border: 2px solid #7f1d1d; 
   border-radius: 0.75rem; 
@@ -93,7 +93,7 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 }
 .tech: hover { 
   transform: translateY(-4px);
-  height: 18px;
+  height: 60;
   box-shadow: 10px 10px 0 rgba(127,29,29,0.8), inset 0 0 32px rgba(220,38,38,0.15);
   background: linear-gradient(145deg, #141414, #262626);
 }
@@ -147,7 +147,7 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
 .skill { 
   display: flex; align-items: center; justify-content: center; 
-  height: 40px; 
+  height: 80; 
   background: linear-gradient(145deg, #111, #1f1f1f); 
   border: 2px solid #7f1d1d; 
   border-radius: 0.75rem; 
@@ -158,7 +158,7 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 }
 .skill:hover { 
   transform: translateY(-4px);
-  height: 30px;
+  height: 60;
   box-shadow: 10px 10px 0 rgba(127,29,29,0.8), inset 0 0 32px rgba(220,38,38,0.15);
   background: linear-gradient(145deg, #141414, #262626);
 }
@@ -185,6 +185,7 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px);} to { opacity: 1; transform: translateX(0);} }
 @keyframes slideInRight { from { opacity: 0; transform: translateX(30px);} to { opacity: 1; transform: translateX(0);} }
+
 
 
 

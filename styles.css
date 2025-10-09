@@ -162,13 +162,13 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 }
 
 /* Multi-color skill variants */
-.skill--html { border-color: #ea580c; color: #fdba74; box-shadow: 6px 6px 0 rgba(234,88,12,0.5), inset 0 0 24px rgba(234,88,12,0.2); }
-.skill--css { border-color: #2563eb; color: #93c5fd; box-shadow: 6px 6px 0 rgba(37,99,235,0.5), inset 0 0 24px rgba(37,99,235,0.2); }
-.skill--js { border-color: #ca8a04; color: #fde68a; box-shadow: 6px 6px 0 rgba(202,138,4,0.5), inset 0 0 24px rgba(202,138,4,0.2); }
-.skill--react { border-color: #06b6d4; color: #99f6e4; box-shadow: 6px 6px 0 rgba(6,182,212,0.5), inset 0 0 24px rgba(6,182,212,0.2); }
-.skill--cpp { border-color: #6366f1; color: #c7d2fe; box-shadow: 6px 6px 0 rgba(99,102,241,0.5), inset 0 0 24px rgba(99,102,241,0.2); }
-.skill--elementor { border-color: #db2777; color: #f9a8d4; box-shadow: 6px 6px 0 rgba(219,39,119,0.5), inset 0 0 24px rgba(219,39,119,0.2); }
-.skill--canva { border-color: #14b8a6; color: #99f6e4; box-shadow: 6px 6px 0 rgba(20,184,166,0.5), inset 0 0 24px rgba(20,184,166,0.2); }
+.skill--html { border-color: #ea580c; color: #fdba74; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(234,88,12,0.2); }
+.skill--css { border-color: #2563eb; color: #93c5fd; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(37,99,235,0.2); }
+.skill--js { border-color: #ca8a04; color: #fde68a; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(202,138,4,0.2); }
+.skill--react { border-color: #06b6d4; color: #99f6e4; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(6,182,212,0.2); }
+.skill--cpp { border-color: #6366f1; color: #c7d2fe; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(99,102,241,0.2); }
+.skill--elementor { border-color: #db2777; color: #f9a8d4; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(219,39,119,0.2); }
+.skill--canva { border-color: #14b8a6; color: #99f6e4; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(20,184,166,0.2); }
 
 /* Footer */
 .site-footer { background: #450a0a; border-top: 1px solid #7f1d1d; color: #ffe4e6; padding: 2rem 0; }
@@ -183,5 +183,6 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px);} to { opacity: 1; transform: translateX(0);} }
 @keyframes slideInRight { from { opacity: 0; transform: translateX(30px);} to { opacity: 1; transform: translateX(0);} }
+
 
 

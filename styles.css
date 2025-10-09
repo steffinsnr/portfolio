@@ -91,14 +91,14 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
   box-shadow: 6px 6px 0 rgba(127,29,29,0.6), inset 0 0 24px rgba(220,38,38,0.08);
   transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
 }
-.tech:hover { 
+.tech: hover { 
   transform: translateY(-4px);
   box-shadow: 10px 10px 0 rgba(127,29,29,0.8), inset 0 0 32px rgba(220,38,38,0.15);
   background: linear-gradient(145deg, #141414, #262626);
 }
 
 /* Multi-color tech variants */
-.tech--html { border-color: #ea580c; color: #fdba74; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(234,88,12,0.2); }
+.tech--html { border-color: #ea580c; color: #fdba74; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(234,88,12,0.2); width: 6px; height: 6px }
 .tech--css { border-color: #2563eb; color: #93c5fd; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(37,99,235,0.2); }
 .tech--js { border-color: #ca8a04; color: #fde68a; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(202,138,4,0.2); }
 .tech--react { border-color: #06b6d4; color: #99f6e4; box-shadow: 1.5px 1.5px 0 rgba(20,184,166,0.5), inset 0 0 6px rgba(6,182,212,0.2); }
@@ -183,6 +183,7 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px);} to { opacity: 1; transform: translateX(0);} }
 @keyframes slideInRight { from { opacity: 0; transform: translateX(30px);} to { opacity: 1; transform: translateX(0);} }
+
 
 
 

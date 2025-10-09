@@ -27,7 +27,7 @@
           <a href="index.html#education" class="nav-link">Education</a>
           <a href="index.html#projects" class="nav-link">Projects</a>
           <a href="index.html#certifications" class="nav-link">Certifications</a>
-          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
         </nav>
       </div>
       <nav class="nav mobile-nav" id="mobileNav">
@@ -38,6 +38,7 @@
         <a href="index.html#education" class="nav-link">Education</a>
         <a href="index.html#projects" class="nav-link">Projects</a>
         <a href="index.html#certifications" class="nav-link">Certifications</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
       </nav>
     </header>
 
@@ -252,7 +253,69 @@
           </div>
         </div>
       </section>
-      
+      <section class="section hero">
+        <div class="container center">
+          <h1 class="section-hero">Get In Touch</h1>
+          <p class="lead muted">Have a question or want to work together? Feel free to reach out!</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-alt">
+        <div class="container">
+          <div class="grid grid-2">
+            <div class="animate-slide-in-left">
+              <h2 class="card-title">Contact Information</h2>
+              <div class="info">
+                <div class="info-item">
+                  <div class="info-icon">✉</div>
+                  <div>
+                    <div class="info-title">Email</div>
+                    <a href="mailto:omurekasteffi@gmail.com" class="info-link">omurekasteffi@gmail.com</a>
+                  </div>
+                </div>
+                <div class="info-item">
+                
+                  <div class="info-icon">in</div>
+                  <div>
+                    <div class="info-title">LinkedIn</div>
+                    <a href="https://www.linkedin.com/in/steffi-omureka19/" target="_blank" rel="noopener" class="info-link">linkedin.com/in/steffi-omureka</a>
+                  </div>
+                </div>
+
+              <div class="card gradient">
+                <h3 class="card-title">Let's Connect!</h3>
+                <p class="muted">
+                  I'm always open to discussing new projects, creative ideas, or opportunities to be
+                  part of your vision. Whether you have a question or just want to say hi, I'll try my
+                  best to get back to you!
+                </p>
+              </div>
+            </div>
+
+            <div class="animate-slide-in-right">
+              <form id="contactForm" class="form">
+                <div class="form-field">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" required placeholder="Your name" />
+                </div>
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required placeholder="your.email@example.com" />
+                </div>
+                <div class="form-field">
+                  <label for="subject">Subject</label>
+                  <input id="subject" name="subject" type="text" required placeholder="What is this about?" />
+                </div>
+                <div class="form-field">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="6" required placeholder="Your message here..."></textarea>
+                </div>
+                <button type="submit" class="btn primary full" id="sendBtn">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">

@@ -79,3 +79,58 @@ if (contactForm && formSuccess && sendBtn) {
   });
 }
 
+// Lightweight carousel logic
+function initCarousel(carousel) {
+  const track = carousel.querySelector('.carousel-track');
+  const images = Array.from(track.querySelectorAll('img'));
+  const prevBtn = carousel.querySelector('.carousel-prev');
+  const nextBtn = carousel.querySelector('.carousel-next');
+  const dotsContainer = carousel.querySelector('.carousel-dots');
+  const autoplayMs = parseInt(carousel.dataset.autoplay || '0', 10);
+  let index = 0;
+  let intervalId = null;
+
+  function renderDots() {
+    dotsContainer.innerHTML = '';
+    images.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === index ? ' active' : '');
+      dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  function goTo(i) {
+    index = (i + images.length) % images.length;
+    const offset = -index * carousel.clientWidth;
+    track.style.transform = `translateX(${offset}px)`;
+    renderDots();
+  }
+
+  function onResize() { goTo(index); }
+
+  prevBtn?.addEventListener('click', () => goTo(index - 1));
+  nextBtn?.addEventListener('click', () => goTo(index + 1));
+  window.addEventListener('resize', onResize);
+
+  if (autoplayMs > 0) {
+    intervalId = setInterval(() => goTo(index + 1), autoplayMs);
+    carousel.addEventListener('mouseenter', () => intervalId && clearInterval(intervalId));
+    carousel.addEventListener('mouseleave', () => { intervalId = setInterval(() => goTo(index + 1), autoplayMs); });
+  }
+
+  // Ensure images sit side-by-side with equal width
+  function layout() {
+    const width = carousel.clientWidth;
+    images.forEach((img) => { img.style.width = `${width}px`; });
+    track.style.width = `${width * images.length}px`;
+  }
+
+  layout();
+  renderDots();
+  goTo(0);
+}
+
+document.querySelectorAll('.carousel').forEach(initCarousel);
+

@@ -97,6 +97,26 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
   background: linear-gradient(145deg, #141414, #262626);
 }
 
+/* Multi-color tech variants */
+.tech--html { border-color: #ea580c; color: #fdba74; box-shadow: 6px 6px 0 rgba(234,88,12,0.5), inset 0 0 24px rgba(234,88,12,0.2); }
+.tech--css { border-color: #2563eb; color: #93c5fd; box-shadow: 6px 6px 0 rgba(37,99,235,0.5), inset 0 0 24px rgba(37,99,235,0.2); }
+.tech--js { border-color: #ca8a04; color: #fde68a; box-shadow: 6px 6px 0 rgba(202,138,4,0.5), inset 0 0 24px rgba(202,138,4,0.2); }
+.tech--react { border-color: #06b6d4; color: #99f6e4; box-shadow: 6px 6px 0 rgba(6,182,212,0.5), inset 0 0 24px rgba(6,182,212,0.2); }
+.tech--cpp { border-color: #6366f1; color: #c7d2fe; box-shadow: 6px 6px 0 rgba(99,102,241,0.5), inset 0 0 24px rgba(99,102,241,0.2); }
+.tech--elementor { border-color: #db2777; color: #f9a8d4; box-shadow: 6px 6px 0 rgba(219,39,119,0.5), inset 0 0 24px rgba(219,39,119,0.2); }
+.tech--canva { border-color: #14b8a6; color: #99f6e4; box-shadow: 6px 6px 0 rgba(20,184,166,0.5), inset 0 0 24px rgba(20,184,166,0.2); }
+
+/* Carousel */
+.carousel { position: relative; overflow: hidden; border-radius: 0.75rem; margin: 1rem 0 1.25rem 0; border: 1px solid #7f1d1d; background: #0a0a0a; }
+.carousel-track { display: flex; transition: transform 500ms ease; }
+.carousel img { display: block; width: 100%; height: 320px; object-fit: cover; }
+.carousel-controls { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.5rem; padding: 0.5rem; }
+.carousel-prev, .carousel-next { background: #171717; color: #fff; border: 1px solid #7f1d1d; border-radius: 0.375rem; width: 36px; height: 36px; cursor: pointer; }
+.carousel-prev:hover, .carousel-next:hover { background: #7f1d1d; }
+.carousel-dots { display: flex; justify-content: center; gap: 0.5rem; }
+.carousel-dot { width: 8px; height: 8px; border-radius: 9999px; border: 1px solid #7f1d1d; background: #111; }
+.carousel-dot.active { background: #dc2626; }
+
 /* Buttons */
 .btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #7f1d1d; color: #fff; text-decoration: none; border: 1px solid #7f1d1d; padding: 0.75rem 1.25rem; border-radius: 0.5rem; transition: background 200ms ease, transform 200ms ease; }
 .btn:hover { background: #991b1b; transform: translateY(-2px); }
@@ -140,6 +160,15 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
   box-shadow: 10px 10px 0 rgba(127,29,29,0.8), inset 0 0 32px rgba(220,38,38,0.15);
   background: linear-gradient(145deg, #141414, #262626);
 }
+
+/* Multi-color skill variants */
+.skill--html { border-color: #ea580c; color: #fdba74; box-shadow: 6px 6px 0 rgba(234,88,12,0.5), inset 0 0 24px rgba(234,88,12,0.2); }
+.skill--css { border-color: #2563eb; color: #93c5fd; box-shadow: 6px 6px 0 rgba(37,99,235,0.5), inset 0 0 24px rgba(37,99,235,0.2); }
+.skill--js { border-color: #ca8a04; color: #fde68a; box-shadow: 6px 6px 0 rgba(202,138,4,0.5), inset 0 0 24px rgba(202,138,4,0.2); }
+.skill--react { border-color: #06b6d4; color: #99f6e4; box-shadow: 6px 6px 0 rgba(6,182,212,0.5), inset 0 0 24px rgba(6,182,212,0.2); }
+.skill--cpp { border-color: #6366f1; color: #c7d2fe; box-shadow: 6px 6px 0 rgba(99,102,241,0.5), inset 0 0 24px rgba(99,102,241,0.2); }
+.skill--elementor { border-color: #db2777; color: #f9a8d4; box-shadow: 6px 6px 0 rgba(219,39,119,0.5), inset 0 0 24px rgba(219,39,119,0.2); }
+.skill--canva { border-color: #14b8a6; color: #99f6e4; box-shadow: 6px 6px 0 rgba(20,184,166,0.5), inset 0 0 24px rgba(20,184,166,0.2); }
 
 /* Footer */
 .site-footer { background: #450a0a; border-top: 1px solid #7f1d1d; color: #ffe4e6; padding: 2rem 0; }

@@ -32,7 +32,7 @@ body { overflow-x: hidden; }
 
 /* Sections */
 .section { padding: 4rem 0; background: linear-gradient(180deg, #000, #171717); }
-.section-alt { padding: 4rem 0; background: linear-gradient(180deg, #171717, #000); align-items: center; }
+.section-alt { padding: 4rem 0; background: linear-gradient(180deg, #171717, #000); align-items: center;  justify-content: center;   align-items: center;}
 .section-title { color: #fff; font-size: 1.875rem; font-weight: 800; display: flex; align-items: center; gap: 0.75rem; margin: 0 0 2rem 0; }
 .section-hero { color: #fff; font-size: 2.5rem; font-weight: 800; margin: 0 0 0.75rem 0; }
 .lead { font-size: 1.125rem; color: #d1d5db; line-height: 1.75; }
@@ -220,6 +220,7 @@ body { overflow-x: hidden; }
 @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px);} to { opacity: 1; transform: translateX(0);} }
 @keyframes slideInRight { from { opacity: 0; transform: translateX(30px);} to { opacity: 1; transform: translateX(0);} }
+
 
 
 

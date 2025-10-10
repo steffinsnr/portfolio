@@ -128,7 +128,6 @@ function initCarousel(carousel) {
   // Ensure images sit side-by-side with equal width
   function layout() {
     const width = carousel.clientWidth;
-    // Iterate over slides, not images, to set their width
     slides.forEach((slide) => { slide.style.width = `${width}px`; });
     track.style.width = `${width * slides.length}px`;
   }
@@ -139,5 +138,6 @@ function initCarousel(carousel) {
 }
 
 document.querySelectorAll('.carousel').forEach(initCarousel);
+
 
 

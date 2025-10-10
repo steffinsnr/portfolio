@@ -1,59 +1,113 @@
-<section id="contact" class="section section-alt1">
-  <div class="container9">
-    <div class="card9">
-      <div class="container">
-        <div class="grid grid-2">
-          <div class="animate-slide-in-left">
-            <h2 class="card-title">Contact Information</h2>
-            <div class="info">
-              <div class="info-item">
-                <div class="info-icon">✉</div>
-                <div>
-                  <div class="info-title">Email</div>
-                  <a href="mailto:omurekasteffi@gmail.com" class="info-link">omurekasteffi@gmail.com</a>
-                </div>
-              </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steffi Omureka Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Steffi Omureka</div>
+      <nav class="nav" id="desktopNav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </div>
+  </header>
 
-              <div class="info-item">
-                <div class="info-icon">in</div>
-                <div>
-                  <div class="info-title">LinkedIn</div>
-                  <a href="https://www.linkedin.com/in/steffi-omureka19/" target="_blank" rel="noopener" class="info-link">linkedin.com/in/steffi-omureka</a>
-                </div>
-              </div>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text animate-slide-in-left">
+        <h1 class="hero-title">Hi, I'm <span class="accent">Steffi Omureka</span></h1>
+        <h2 class="hero-subtitle">Web Developer & Designer</h2>
+        <p class="lead">
+          I build modern, interactive, and responsive websites that blend creativity and functionality.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn">View My Work</a>
+          <a href="#contact" class="btn primary">Let's Connect</a>
+        </div>
+      </div>
+      <div class="hero-photo animate-slide-in-right">
+        <img src="images/profile.jpg" alt="Steffi Omureka" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section-alt1" id="contact">
+    <div class="container">
+      <div class="grid-2">
+        <!-- Contact Info -->
+        <div class="info animate-slide-in-left">
+          <h2 class="section-title">📞 Let's Connect</h2>
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-title">Location</div>
+              <div class="muted">Nakuru, Kenya</div>
             </div>
-          </div> <!-- end of animate-slide-in-left -->
+          </div>
 
-          <div class="animate-slide-in-right">
-            <div class="connect-box">
-              <h3>Let's Connect!</h3>
-              <p>
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-              </p>
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div>
+              <div class="info-title">Email</div>
+              <a href="mailto:steffi@example.com" class="info-link">steffi@example.com</a>
             </div>
+          </div>
 
-            <form id="contactForm" class="form">
-              <div class="form-field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" required placeholder="Your name" />
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required placeholder="your.email@example.com" />
-              </div>
-              <div class="form-field">
-                <label for="subject">Subject</label>
-                <input id="subject" name="subject" type="text" required placeholder="What is this about?" />
-              </div>
-              <div class="form-field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" required placeholder="Your message here..."></textarea>
-              </div>
-              <button type="submit" class="btn primary full" id="sendBtn">Send Message</button>
-            </form>
-          </div> <!-- end of animate-slide-in-right -->
-        </div> <!-- end grid -->
-      </div> <!-- end container -->
-    </div> <!-- end card9 -->
-  </div> <!-- end container9 -->
-</section>
+          <div class="info-item">
+            <div class="info-icon">📱</div>
+            <div>
+              <div class="info-title">Phone</div>
+              <a href="tel:+254700000000" class="info-link">+254 700 000 000</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="form animate-slide-in-right">
+          <h2 class="section-title">Send a Message</h2>
+
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your email" required />
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer center">
+    <p>© 2025 Steffi Omureka | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+      document.getElementById('desktopNav').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

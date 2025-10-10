@@ -83,6 +83,7 @@ if (contactForm && formSuccess && sendBtn) {
 function initCarousel(carousel) {
   const track = carousel.querySelector('.carousel-track');
   const images = Array.from(track.querySelectorAll('img'));
+  const slides = Array.from(track.querySelectorAll('.carousel-slide')); // Get slides, not just images
   const prevBtn = carousel.querySelector('.carousel-prev');
   const nextBtn = carousel.querySelector('.carousel-next');
   const dotsContainer = carousel.querySelector('.carousel-dots');
@@ -91,8 +92,9 @@ function initCarousel(carousel) {
   let intervalId = null;
 
   function renderDots() {
+    if (!dotsContainer) return;
     dotsContainer.innerHTML = '';
-    images.forEach((_, i) => {
+    slides.forEach((_, i) => {
       const dot = document.createElement('button');
       dot.className = 'carousel-dot' + (i === index ? ' active' : '');
       dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
@@ -102,13 +104,16 @@ function initCarousel(carousel) {
   }
 
   function goTo(i) {
-    index = (i + images.length) % images.length;
-    const offset = -index * carousel.clientWidth;
+    index = (i + slides.length) % slides.length;
+    const offset = -index * carousel.clientWidth; // Use a negative value for leftward movement
     track.style.transform = `translateX(${offset}px)`;
     renderDots();
   }
 
-  function onResize() { goTo(index); }
+  function onResize() {
+    layout(); // Recalculate layout on resize
+    goTo(index);
+  }
 
   prevBtn?.addEventListener('click', () => goTo(index - 1));
   nextBtn?.addEventListener('click', () => goTo(index + 1));
@@ -123,8 +128,9 @@ function initCarousel(carousel) {
   // Ensure images sit side-by-side with equal width
   function layout() {
     const width = carousel.clientWidth;
-    images.forEach((img) => { img.style.width = `${width}px`; });
-    track.style.width = `${width * images.length}px`;
+    // Iterate over slides, not images, to set their width
+    slides.forEach((slide) => { slide.style.width = `${width}px`; });
+    track.style.width = `${width * slides.length}px`;
   }
 
   layout();
@@ -133,4 +139,5 @@ function initCarousel(carousel) {
 }
 
 document.querySelectorAll('.carousel').forEach(initCarousel);
+
 

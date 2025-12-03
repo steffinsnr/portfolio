@@ -128,7 +128,13 @@ function initCarousel(carousel) {
   // Ensure images sit side-by-side with equal width
   function layout() {
     const width = carousel.clientWidth;
-    slides.forEach((slide) => { slide.style.width = `${width}px`; });
+    slides.forEach((slide) => { 
+      slide.style.width = `${width}px`;
+      // Ensure slide height is auto for responsive behavior
+      if (window.innerWidth <= 768) {
+        slide.style.height = 'auto';
+      }
+    });
     track.style.width = `${width * slides.length}px`;
   }
 

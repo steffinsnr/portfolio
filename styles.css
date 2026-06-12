@@ -417,7 +417,7 @@ body { overflow-x: hidden; }
   font-weight: 600; 
   margin-bottom: 1.25rem; 
   color: #3A3A3A; 
-  transition: colour 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .skill-pills { 

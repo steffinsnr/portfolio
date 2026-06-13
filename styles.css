@@ -50,7 +50,8 @@ body { overflow-x: hidden; }
 
 @media (max-width: 768px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-photo { display: flex; justify-content: center; }
+  .hero-photo { display: flex !important; justify-content: center; width: 100%; visibility: visible; }
+  .hero-photo img { width: 14rem; height: 14rem; display: block; }
   .hero-title { font-size: 2.25rem; text-align: center; }
   .hero-subtitle { text-align: center; }
   .hero-actions { justify-content: center; }

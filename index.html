@@ -314,7 +314,7 @@
         </div>
       </section>
 
-      <!-- CONTACT SECTION - UPDATED WITH FORMSUBMIT -->
+      <!-- CONTACT SECTION - UPDATED WITH FORMSUBMIT + REDIRECT FIX -->
       <section id="contact" class="section section-alt1">
         <div class="container">
           <div class="grid grid-2">
@@ -348,9 +348,9 @@
             <div class="animate-slide-in-right">
               <!-- 
                 FORMSUBMIT SETUP:
-                1. Replace "nsnrsteffi19@gmail.com" below with your actual email if different
-                2. On first submission, FormSubmit will send you a confirmation email to activate
-                3. After activation, all form submissions will go straight to your inbox
+                1. On first submission, FormSubmit will send you a confirmation email to activate
+                2. After activation, all form submissions go straight to your inbox
+                3. _next redirects back to your portfolio contact section after submission
               -->
               <form 
                 id="contactForm" 
@@ -362,6 +362,8 @@
                 <input type="hidden" name="_subject" value="New Portfolio Contact Message!">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
+                <!-- Redirect back to portfolio contact section after submission -->
+                <input type="hidden" name="_next" value="https://steffinsnr.github.io/portfolio/#contact">
                 
                 <div class="form-field">
                   <label for="name">Name</label>

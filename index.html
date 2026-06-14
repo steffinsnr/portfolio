@@ -175,7 +175,7 @@
             </div>
             <div class="card border-accent">
               <h3 class="card-title">Front Desk Management - Intern</h3>
-              <p class="muted org">Gertrude's Children's Hospital</p>
+              <p class="muted org">Gertrude's Children Hospital</p>
               <p class="muted">January 2023 – December 2023</p>
               <ul class="ulist">
                 <li>Managed patient flow and ensured orderly access to services</li>
@@ -314,6 +314,7 @@
         </div>
       </section>
 
+      <!-- CONTACT SECTION - UPDATED WITH FORMSUBMIT -->
       <section id="contact" class="section section-alt1">
         <div class="container">
           <div class="grid grid-2">
@@ -345,7 +346,23 @@
             </div>
 
             <div class="animate-slide-in-right">
-              <form id="contactForm" class="form">
+              <!-- 
+                FORMSUBMIT SETUP:
+                1. Replace "nsnrsteffi19@gmail.com" below with your actual email if different
+                2. On first submission, FormSubmit will send you a confirmation email to activate
+                3. After activation, all form submissions will go straight to your inbox
+              -->
+              <form 
+                id="contactForm" 
+                action="https://formsubmit.co/nsnrsteffi19@gmail.com" 
+                method="POST" 
+                class="form"
+              >
+                <!-- Hidden fields for FormSubmit configuration -->
+                <input type="hidden" name="_subject" value="New Portfolio Contact Message!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
                 <div class="form-field">
                   <label for="name">Name</label>
                   <input id="name" name="name" type="text" required placeholder="Your name" />
@@ -412,7 +429,6 @@
         mobileMenuBtn.addEventListener('click', () => {
           mobileNav.classList.toggle('show');
         });
-        // Close mobile menu when a link is clicked
         mobileNav.querySelectorAll('a').forEach(link => {
           link.addEventListener('click', () => {
             mobileNav.classList.remove('show');

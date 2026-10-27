@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Steffi Rose Nasumba Portfolio</title>
+    <title>Steffi Rose Nasumba | Web Designer & Front-End Developer</title>
+    <meta name="description" content="Portfolio of Steffi Rose Nasumba: front-end developer and web designer building responsive, user-centred websites with HTML, CSS, JavaScript and React." />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -20,9 +21,9 @@
         <nav class="nav" id="desktopNav">
           <a href="#professional-summary" class="nav-link">About</a>
           <a href="#technical-skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
           <a href="#experience" class="nav-link">Experience</a>
           <a href="#education" class="nav-link">Education</a>
-          <a href="#projects" class="nav-link">Projects</a>
           <a href="#certifications" class="nav-link">Certifications</a>
           <a href="#contact" class="nav-link">Contact</a>
         </nav>
@@ -30,9 +31,9 @@
       <nav class="nav mobile-nav" id="mobileNav">
         <a href="#professional-summary" class="nav-link">About</a>
         <a href="#technical-skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#education" class="nav-link">Education</a>
-        <a href="#projects" class="nav-link">Projects</a>
         <a href="#certifications" class="nav-link">Certifications</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
@@ -43,14 +44,15 @@
       <section id="home" class="section hero">
         <div class="container hero-grid">
           <div class="hero-photo animate-slide-in-left">
-            <img
-              src="Steffi_n.jpg"
-              alt="Steffi Nasumba"
-            />
+            <img src="Steffi_n.jpg" alt="Steffi Nasumba" />
           </div>
           <div class="hero-content animate-slide-in-right">
             <h1 class="hero-title">Steffi Rose Nasumba</h1>
-            <p class="hero-tagline">Web Designer & Front-End Developer crafting engaging, visually appealing, and user-friendly digital experiences.</p>
+            <p class="hero-tagline">Front-end developer and web designer. I build responsive, easy-to-use websites that help people find information and get things done.</p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn primary">View my projects</a>
+              <a href="Steffi_Rose_Nasumba_CV.pdf" class="btn" download>Download CV (PDF)</a>
+            </div>
             <div class="chips">
               <a href="https://www.linkedin.com/in/steffi-nsnr19/" target="_blank" rel="noopener" class="chip">
                 <span class="chip-icon">in</span>
@@ -71,43 +73,45 @@
           <div class="summary-grid">
             <div>
               <div class="summary-label">Professional Summary</div>
-              <h2 class="summary-heading">Designing with purpose</h2>
+              <h2 class="summary-heading">Design that works for real users</h2>
               <p class="lead" style="margin-bottom:1rem;">
-                I am a web designer passionate about creating engaging and visually
-                appealing websites. I enjoy experimenting with <strong>HTML, CSS, React,
-                and JavaScript</strong> to bring ideas to life. I am eager to continue
-                learning new design techniques and tools while building my skills through
-                personal projects.
+                I design and build responsive websites with <strong>HTML, CSS, JavaScript
+                and React</strong>. I have shipped three live projects, from a property
+                listings site to a farm management tool, and completed a web design
+                internship where I built client sites in Elementor and produced wireframes,
+                mockups and UX research.
               </p>
               <p class="lead">
-                My goal is to design user-friendly and visually appealing websites that make
-                a positive impact, blending thoughtful design with clean, responsive
-                front-end development.
+                Before moving into tech full-time, I spent two years in banking and
+                healthcare support roles, talking to customers every day. That experience
+                shapes how I design: I start with what the user is trying to do, remove
+                what gets in the way, and test that the result is clear.
               </p>
             </div>
             <div class="stat-cards">
               <div class="stat-card">
-                <p class="stat-number">10+</p>
-                <p class="stat-desc">Tools &amp; Technologies</p>
+                <p class="stat-number">3</p>
+                <p class="stat-desc">Live projects you can open and use</p>
               </div>
               <div class="stat-card">
-                <p class="stat-number">5+</p>
-                <p class="stat-desc">Projects Delivered</p>
+                <p class="stat-number">1</p>
+                <p class="stat-desc">Web design internship (5 months)</p>
               </div>
               <div class="stat-card">
-                <p class="stat-number">2</p>
-                <p class="stat-desc">Industry Internships</p>
+                <p class="stat-number">9</p>
+                <p class="stat-desc">Design and development tools</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- SKILLS -->
       <section id="technical-skills" class="section">
         <div class="container">
           <div class="skills-label">Technical Skills</div>
           <h2 class="skills-heading">Tools of the craft</h2>
-          <p class="skills-sub">A blend of design and development tools I use to turn ideas into polished, functional interfaces.</p>
+          <p class="skills-sub">The design and development tools I use to turn ideas into polished, functional interfaces.</p>
           <div class="skill-cards">
             <div class="skill-card">
               <h3 class="skill-card-title">Design</h3>
@@ -138,65 +142,182 @@
               <h3 class="skill-card-title">Workflow</h3>
               <div class="skill-pills">
                 <span class="skill-pill">Git</span>
-                <span class="skill-pill">Version Control</span>
+                <span class="skill-pill">GitHub</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="experience" class="section section-alt">
+      <!-- PROJECTS (moved up: this is what clients and developers want to see first) -->
+      <section id="projects" class="section section-alt">
         <div class="container">
-          <h2 class="section-title"><span class="accent">▮</span> Experience</h2>
-          <div class="vlist">
-            <div class="card border-accent">
-              <h3 class="card-title">Customer Experience Consultant</h3>
-              <p class="muted org">National Bank of Kenya (NBK)</p>
-              <p class="muted">January 2025 – January 2026 (Contract)</p>
-              <ul class="ulist">
-                <li>Served as the primary communication link between the bank and customers across phone, email, live chat, WhatsApp, and social media channels</li>
-                <li>Resolved account, transaction, and product inquiries with strong first-contact resolution, leveraging CRM and ticketing systems to track and close issues</li>
-                <li>Processed account openings, loan applications, and card services through internal banking systems with strict data privacy and regulatory compliance</li>
-                <li>Guided customers on digital banking platforms and self-service options, driving adoption and reducing repeat contacts</li>
-                <li>Coordinated cross-departmentally to escalate and resolve complex issues, streamlining workflows and minimising customer wait times</li>
-              </ul>
+          <h2 class="section-title"><span class="accent">▮</span> Projects</h2>
+          <p class="muted projects-intro">Each project below shows the problem I set out to solve, what I built, and what came out of it.</p>
+          <div class="grid">
+
+            <!-- Project 1 -->
+            <div class="project-card animate-fade-in">
+              <div class="carousel" data-autoplay="3000">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/gabage1.jpg" alt="Garbage Collection Management System dashboard" /></div>
+                </div>
+                <div class="carousel-controls"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Garbage Collection Management System</h3>
+                <div class="tech-tags">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+                <dl class="psr">
+                  <dt>Problem</dt>
+                  <dd>Residents had no simple way to request a collection or know when their zone would be served, and admins had no single view of requests.</dd>
+                  <dt>Solution</dt>
+                  <dd>A web platform with resident request forms, zone-based pickup scheduling and an admin dashboard to track and manage requests.</dd>
+                  <dt>Result</dt>
+                  <dd>A working, deployed system covering the full request-to-schedule flow for two user roles (resident and admin). Also my final-year project.</dd>
+                </dl>
+                <div class="project-links">
+                  <a href="https://steffinsnr.github.io/garbage-collection-system/" class="btn" target="_blank" rel="noopener">Live demo</a>
+                  <a href="https://github.com/steffinsnr/garbage-collection-system" class="btn" target="_blank" rel="noopener">GitHub repo</a>
+                </div>
+              </div>
             </div>
-            <div class="card border-accent">
-              <h3 class="card-title">Web Design Intern</h3>
-              <p class="muted org">Startappz Limited Company</p>
-              <p class="muted">April 2024 – August 2024</p>
-              <ul class="ulist">
-                <li>Created visually appealing and responsive website designs using Elementor</li>
-                <li>Designed promotional flyers and social media graphics using Canva</li>
-                <li>Supported website content updates and troubleshooting minor layout issues</li>
-                <li>Conducted user research and competitor analysis to improve website UX</li>
-                <li>Created wireframes and mockups for new website features and landing pages</li>
-              </ul>
+
+            <!-- Project 2 -->
+            <div class="project-card animate-fade-in">
+              <div class="carousel" data-autoplay="2000">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/Real%20estate%20(2).png" alt="Property listings website homepage" /></div>
+                </div>
+                <div class="carousel-controls"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Property Listings Website</h3>
+                <div class="tech-tags">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Responsive</span>
+                </div>
+                <dl class="psr">
+                  <dt>Problem</dt>
+                  <dd>Property buyers need to compare listings quickly, and many real estate sites bury filters and make enquiring hard on mobile.</dd>
+                  <dt>Solution</dt>
+                  <dd>A mobile-first listings site with filters, an image gallery and clear enquiry prompts on every listing, with animated sections for a modern feel.</dd>
+                  <dt>Result</dt>
+                  <dd>A fully responsive site, live on GitHub Pages, that works from phone to desktop without layout breaks.</dd>
+                </dl>
+                <div class="project-links">
+                  <a href="https://steffinsnr.github.io/Nsnr-Real-estate/" class="btn" target="_blank" rel="noopener">Live demo</a>
+                  <a href="https://github.com/steffinsnr/Nsnr-Real-estate" class="btn" target="_blank" rel="noopener">GitHub repo</a>
+                </div>
+              </div>
             </div>
-            <div class="card border-accent">
-              <h3 class="card-title">Front Desk Management - Intern</h3>
-              <p class="muted org">Gertrude's Children Hospital</p>
-              <p class="muted">January 2023 – December 2023</p>
-              <ul class="ulist">
-                <li>Managed patient flow and ensured orderly access to services</li>
-                <li>Handled patient registration, billing charges, and appointment bookings</li>
-                <li>Provided customer care services, including directions and handling complaints professionally</li>
-                <li>Processed insurance claims and verified patient coverage details</li>
-                <li>Coordinated with nursing staff to prioritise urgent patient cases</li>
-              </ul>
+
+            <!-- Project 3 -->
+            <div class="project-card animate-fade-in">
+              <div class="carousel" data-autoplay="2000">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/realt1.jpeg" alt="Farm and Orchard Management System dashboard" /></div>
+                </div>
+                <div class="carousel-controls"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Farm and Orchard Management System</h3>
+                <div class="tech-tags">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">CSS</span>
+                </div>
+                <dl class="psr">
+                  <dt>Problem</dt>
+                  <dd>Farm teams track crops, stock and harvests across notebooks and spreadsheets, which makes planning and handovers error-prone.</dd>
+                  <dt>Solution</dt>
+                  <dd>A React app for crop scheduling, inventory and harvest tracking, with separate dashboards for each user role.</dd>
+                  <dt>Result</dt>
+                  <dd>One place to plan, record and review farm activity, built as a component-based app and deployed live.</dd>
+                </dl>
+                <div class="project-links">
+                  <a href="https://steffinsnr.github.io/Farm-and-orchard-management-system/" class="btn" target="_blank" rel="noopener">Live demo</a>
+                  <a href="https://github.com/steffinsnr/Farm-and-orchard-management-system" class="btn" target="_blank" rel="noopener">GitHub repo</a>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      <section id="education" class="section">
+      <!-- EXPERIENCE (most relevant role first) -->
+      <section id="experience" class="section">
+        <div class="container">
+          <h2 class="section-title"><span class="accent">▮</span> Experience</h2>
+          <div class="vlist">
+
+            <div class="card border-accent featured">
+              <span class="badge">Most relevant to web design</span>
+              <h3 class="card-title">Web Design Intern</h3>
+              <p class="muted org">Startappz Limited Company</p>
+              <p class="muted">April 2024 – August 2024</p>
+              <p class="role-summary">
+                Worked on a small team delivering client websites and marketing visuals, covering the
+                path from research and wireframes to a finished, responsive page.
+              </p>
+              <ul class="ulist">
+                <li><strong>Built responsive websites in Elementor</strong></li>
+                <li><strong>Researched users and competitors</strong> to find usability gaps, then turned the findings into layout and navigation improvements</li>
+                <li><strong>Produced wireframes and mockups</strong> for new features and landing pages so the team could agree on structure before building</li>
+                <li><strong>Maintained live sites</strong>: updated content and fixed minor layout issues</li>
+                <li><strong>Designed promotional flyers and social media graphics in Canva</strong>, keeping visuals consistent with each client's brand</li>
+              </ul>
+              <p class="skills-used"><strong>Tools:</strong> Elementor, Canva</p>
+              <!-- TIP: add one real outcome here (sites delivered, a client quote) if you have it. -->
+            </div>
+
+            <div class="card border-accent">
+              <h3 class="card-title">Customer Experience Consultant</h3>
+              <p class="muted org">National Bank of Kenya (NBK)</p>
+              <p class="muted">January 2025 – January 2026 (Contract)</p>
+              <p class="role-summary">
+                A year of daily conversations with customers across phone, email, chat, WhatsApp and
+                social media. It taught me how real people get stuck in digital products, and what
+                makes support systems work.
+              </p>
+              <ul class="ulist">
+                <li><strong>User empathy:</strong> listened to customer problems across five channels and explained digital banking steps in plain language</li>
+                <li><strong>Pattern spotting:</strong> used CRM and ticketing systems to track issues, which showed me where customers get confused and repeat contacts</li>
+                <li><strong>Self-service adoption:</strong> guided customers onto digital and self-service options, reducing repeat contacts</li>
+                <li><strong>Cross-team problem solving:</strong> escalated complex cases to the right department and kept customers informed until resolution</li>
+                <li><strong>Data responsibility:</strong> handled account openings, loan applications and card services under strict privacy and compliance rules</li>
+              </ul>
+              <p class="skills-used"><strong>Transferable to UX:</strong> user research, empathy, accessibility of language, support workflows, privacy awareness</p>
+            </div>
+
+            <div class="card border-accent compact">
+              <h3 class="card-title">Front Desk Management Intern</h3>
+              <p class="muted org">Gertrude's Children's Hospital</p>
+              <p class="muted">January 2023 – December 2023</p>
+              <p class="role-summary">
+                Coordinated patient registration, appointments and billing in a high-pressure setting,
+                building the calm communication and prioritisation skills I bring to client work.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section section-alt">
         <div class="container">
           <h2 class="section-title"><span class="accent">▮</span> Education</h2>
           <div class="vlist">
             <div class="card border-accent">
               <h3 class="card-title">Bachelor of Science in Information Technology</h3>
               <p class="muted org">KCA University</p>
-              <p class="muted">September 2024 – July 2027</p>
+              <p class="muted">September 2024 – July 2027 (expected)</p>
             </div>
             <div class="card border-accent">
               <h3 class="card-title">Diploma in Information Technology</h3>
@@ -207,63 +328,7 @@
         </div>
       </section>
 
-      <section class="section hero">
-        <div class="container centre">
-          <h1 class="section-hero">Projects & Certification</h1>
-          <p class="lead muted">Showcasing selected work and credentials</p>
-        </div>
-      </section>
-
-      <!-- PROJECTS SECTION (moved before Certifications) -->
-      <section id="projects" class="section section-alt">
-        <div class="container">
-          <h2 class="section-title"><span class="accent">▮</span> Projects</h2>
-          <div class="grid">
-
-            <!-- Project 1: Garbage Collection -->
-            <div class="project-card animate-fade-in">
-              <div class="carousel" data-autoplay="3000">
-                <div class="carousel-track">
-                  <div class="carousel-slide"><img src="images/gabage1.jpg" alt="Garbage Collection System" /></div>
-                </div>
-                <div class="carousel-controls"></div>
-              </div>
-              <h3 class="project-title">Garbage Collection Management System</h3>
-              <p class="muted">A web-based waste management platform with resident requests, zone-based scheduling, and admin dashboards. Built with HTML, CSS, and JavaScript.</p>
-              <a href="https://steffinsnr.github.io/garbage-collection-system/" class="btn">Live Link ></a>
-            </div>
-
-            <!-- Project 2: Nsnr Real Estate (FIXED: carousel-slide div is now closed) -->
-            <div class="project-card animate-fade-in">
-              <div class="carousel" data-autoplay="2000">
-                <div class="carousel-track">
-                  <div class="carousel-slide"><img src="images/Real%20estate%20(2).png" alt="Nsnr Real Estate Website" /></div>
-                </div>
-                <div class="carousel-controls"></div>
-              </div>
-              <h3 class="project-title">Nsnr Real Estate Website</h3>
-              <p class="muted">Responsive listings with filters, gallery, and lead prompts using HTML, CSS, and JavaScript.</p>
-              <a href="https://steffinsnr.github.io/Nsnr-Real-estate/" class="btn">Live Link ></a>
-            </div>
-
-            <!-- Project 3: Farm and Orchard -->
-            <div class="project-card animate-fade-in">
-              <div class="carousel" data-autoplay="2000">
-                <div class="carousel-track">
-                  <div class="carousel-slide"><img src="images/realt1.jpeg" alt="Farm Management System" /></div>
-                </div>
-                <div class="carousel-controls"></div>
-              </div>
-              <h3 class="project-title">Farm and Orchard Management System</h3>
-              <p class="muted">React-based tool for crop scheduling, inventory, and harvest tracking with role dashboards.</p>
-              <a href="https://steffinsnr.github.io/Farm-and-orchard-management-system/" class="btn">Live Link ></a>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- CERTIFICATIONS SECTION (after Projects) -->
+      <!-- CERTIFICATIONS -->
       <section id="certifications" class="section">
         <div class="container">
           <h2 class="section-title"><span class="accent">▮</span> Certifications</h2>
@@ -272,15 +337,10 @@
               <h3 class="card-title">CCNAv7: Introduction to Networks</h3>
               <p class="muted org">Cisco Networking Academy</p>
               <p class="muted">Completed: October, 2022</p>
-              <p class="muted">
-                Completed comprehensive training in network fundamentals, architecture,
-                protocols, and basic configuration through Cisco Networking Academy.
-              </p>
+              <p class="muted">Network fundamentals, architecture, protocols, and basic configuration.</p>
             </div>
             <div class="actions">
-              <a href="CCNA-_Introduction_to_Networks_certificate_nrosesteffi-gmail-com_1e9607d4-841d-4393-8e19-4080940f7ea2.pdf" target="_blank" rel="noopener" class="btn">
-                View Certificate
-              </a>
+              <a href="CCNA-_Introduction_to_Networks_certificate_nrosesteffi-gmail-com_1e9607d4-841d-4393-8e19-4080940f7ea2.pdf" target="_blank" rel="noopener" class="btn">View Certificate</a>
             </div>
           </div>
           <div class="card row">
@@ -288,25 +348,18 @@
               <h3 class="card-title">Introduction to Modern AI</h3>
               <p class="muted org">Cisco Networking Academy</p>
               <p class="muted">Completed: December, 2025</p>
-              <p class="muted">
-                Completed comprehensive training in Modern Artificial Intelligence Fundamentals, covering core
-                AI Concepts, Machine learning basics, data handling, and practical applications through hands-on learning and real-world use cases.
-              </p>
+              <p class="muted">Core AI concepts, machine learning basics, data handling, and practical applications.</p>
             </div>
             <div class="actions">
-              <a href="Introduction_to_Modern_AI_certificate_nrosesteffi-gmail-com_4afda1f8-398b-41a9-b5b6-f0df56b2a8be.pdf" target="_blank" rel="noopener" class="btn">
-                View Certificate
-              </a>
+              <a href="Introduction_to_Modern_AI_certificate_nrosesteffi-gmail-com_4afda1f8-398b-41a9-b5b6-f0df56b2a8be.pdf" target="_blank" rel="noopener" class="btn">View Certificate</a>
             </div>
           </div>
           <div class="card row">
             <div class="flex-1">
-              <h3 class="card-title">Certificate of Completion</h3>
+              <h3 class="card-title">Certificate of Completion: Women in Tech (WIT)</h3>
               <p class="muted org">Olive International</p>
               <p class="muted">Awarded: February, 2025</p>
-              <p class="muted">
-                Awarded for completing the Women In Tech(WIT)program conducted at KCA University.
-              </p>
+              <p class="muted">Awarded for completing the Women in Tech programme at KCA University.</p>
             </div>
           </div>
         </div>
@@ -315,7 +368,10 @@
       <section class="section hero">
         <div class="container centre">
           <h1 class="section-hero">Get In Touch</h1>
-          <p class="lead muted">Have a question or want to work together? Feel free to reach out!</p>
+          <p class="lead muted">Have a project in mind or a role to fill? Send a message and I will get back to you.</p>
+          <div class="hero-cta" style="justify-content:center;">
+            <a href="Steffi_Rose_Nasumba_CV.pdf" class="btn primary" download>Download CV (PDF)</a>
+          </div>
         </div>
       </section>
 
@@ -337,46 +393,45 @@
                   <div class="info-icon">in</div>
                   <div>
                     <div class="info-title">LinkedIn</div>
-                    <a href="https://www.linkedin.com/in/steffi-nsnr19/" target="_blank" rel="noopener" class="info-link">linkedin.com/in/steffi-nsnr</a>
+                    <a href="https://www.linkedin.com/in/steffi-nsnr19/" target="_blank" rel="noopener" class="info-link">linkedin.com/in/steffi-nsnr19</a>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">gh</div>
+                  <div>
+                    <div class="info-title">GitHub</div>
+                    <a href="https://github.com/steffinsnr" target="_blank" rel="noopener" class="info-link">github.com/steffinsnr</a>
                   </div>
                 </div>
               </div>
               <div class="card gradient">
-                <h3 class="card-title">Let's Connect!</h3>
+                <h3 class="card-title">Let's work together</h3>
                 <p class="muted">
-                  I'm always open to discussing new projects, creative ideas, or opportunities to be
-                  part of your vision.
+                  I am open to freelance projects, internships and junior front-end roles.
+                  Tell me what you are building and who it is for.
                 </p>
               </div>
             </div>
 
             <div class="animate-slide-in-right">
-              <!--
-                FORMSUBMIT SETUP:
-                1. On first submission, FormSubmit will send you a confirmation email to activate
-                2. After activation, all form submissions go straight to your inbox
-                3. _next redirects back to your portfolio contact section after submission
-              -->
               <form
                 id="contactForm"
                 action="https://formsubmit.co/nsnrsteffi19@gmail.com"
                 method="POST"
                 class="form"
               >
-                <!-- Hidden fields for FormSubmit configuration -->
                 <input type="hidden" name="_subject" value="New Portfolio Contact Message!">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
-                <!-- Redirect back to portfolio contact section after submission -->
                 <input type="hidden" name="_next" value="https://steffinsnr.github.io/portfolio/#contact">
 
                 <div class="form-field">
                   <label for="name">Name</label>
-                  <input id="name" name="name" type="text" required placeholder="Your name" />
+                  <input id="name" name="name" type="text" required placeholder="Your name" autocomplete="name" />
                 </div>
                 <div class="form-field">
                   <label for="email">Email</label>
-                  <input id="email" name="email" type="email" required placeholder="your.email@example.com" />
+                  <input id="email" name="email" type="email" required placeholder="your.email@example.com" autocomplete="email" />
                 </div>
                 <div class="form-field">
                   <label for="subject">Subject</label>
@@ -386,7 +441,7 @@
                   <label for="message">Message</label>
                   <textarea id="message" name="message" rows="6" required placeholder="Your message here..."></textarea>
                 </div>
-                <button type="submit" class="btn primary full" id="sendBtn">Send Message</button>
+                <button type="submit" class="btn primary full" id="sendBtn">Send message</button>
               </form>
             </div>
           </div>
@@ -396,11 +451,10 @@
 
     <footer class="site-footer">
       <div class="container centre">
-        <p>© 2025 Steffi N'snr. All rights reserved.</p>
+        <p>© 2026 Steffi Rose Nasumba. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- All behaviour (menu, smooth scroll, progress bar, carousel, reveal) lives in script.js -->
     <script src="script.js"></script>
   </body>
 </html>

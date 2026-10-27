@@ -1,7 +1,14 @@
+// ===============================
 // Mobile menu toggle
+// ===============================
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileNav = document.getElementById('mobileNav');
 const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+
+function closeMobileNav() {
+  if (mobileNav) mobileNav.classList.remove('show');
+  if (mobileMenuIcon) mobileMenuIcon.textContent = '☰';
+}
 
 if (mobileMenuBtn && mobileNav && mobileMenuIcon) {
   mobileMenuBtn.addEventListener('click', () => {
@@ -10,86 +17,93 @@ if (mobileMenuBtn && mobileNav && mobileMenuIcon) {
   });
 }
 
-// Smooth scroll for nav links
+// ===============================
+// Smooth scroll for nav links (with header offset)
+// ===============================
+const HEADER_OFFSET = 70;
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (e) => {
     const href = link.getAttribute('href');
-    if (!href) return;
-    const id = href.slice(1);
-    const target = document.getElementById(id);
-    if (target) {
-      e.preventDefault();
-      mobileNav?.classList.remove('show');
-      mobileMenuIcon && (mobileMenuIcon.textContent = '☰');
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (!href || href === '#') return;
+
+    const target = document.getElementById(href.slice(1));
+    if (!target) return;
+
+    e.preventDefault();
+    closeMobileNav();
+
+    const top = target.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
+    window.scrollTo({ top, behavior: 'smooth' });
   });
 });
 
+// ===============================
 // Scroll progress bar
+// ===============================
 const progressBar = document.getElementById('progressBar');
+
 const updateProgress = () => {
   const total = document.documentElement.scrollHeight - window.innerHeight;
   const progress = total > 0 ? (window.scrollY / total) * 100 : 0;
   if (progressBar) progressBar.style.width = `${progress}%`;
 };
+
 window.addEventListener('scroll', updateProgress);
 window.addEventListener('resize', updateProgress);
 updateProgress();
 
-// Contact form mailto submit
-const contactForm = document.getElementById('contactForm');
-const formSuccess = document.getElementById('formSuccess');
-const sendBtn = document.getElementById('sendBtn');
-
-if (contactForm && formSuccess && sendBtn) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('name')?.value?.trim() || '';
-    const email = document.getElementById('email')?.value?.trim() || '';
-    const subject = document.getElementById('subject')?.value?.trim() || '';
-    const message = document.getElementById('message')?.value?.trim() || '';
-
-    const to = 'omurekasteffi@gmail.com';
-    const composedSubject = subject || `New message from ${name || 'Portfolio Contact'}`;
-    const bodyLines = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      '',
-      message
-    ];
-    const body = encodeURIComponent(bodyLines.join('\n'));
-    const mailtoHref = `mailto:${to}?subject=${encodeURIComponent(composedSubject)}&body=${body}`;
-
-    // Open the user's email client
-    window.location.href = mailtoHref;
-
-    // Optimistically show success after a short delay to allow client to open
-    sendBtn.disabled = true;
-    sendBtn.textContent = 'Opening email...';
-    setTimeout(() => {
-      formSuccess.hidden = false;
-      sendBtn.textContent = 'Sent!';
-      setTimeout(() => {
-        contactForm.reset();
-        sendBtn.disabled = false;
-        sendBtn.textContent = 'Send Message';
-      }, 2500);
-    }, 800);
-  });
+// ===============================
+// Reveal-on-scroll (for any element with the .reveal class)
+// ===============================
+const reveals = document.querySelectorAll('.reveal');
+if (reveals.length && 'IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    },
+    { threshold: 0.1 }
+  );
+  reveals.forEach((el) => observer.observe(el));
 }
 
-// Lightweight carousel logic
+// ===============================
+// Contact form
+// The form posts directly to FormSubmit (see the action attribute in index.html),
+// so no JavaScript is needed here.
+// ===============================
+
+// ===============================
+// Lightweight carousel
+// ===============================
 function initCarousel(carousel) {
   const track = carousel.querySelector('.carousel-track');
-  const images = Array.from(track.querySelectorAll('img'));
-  const slides = Array.from(track.querySelectorAll('.carousel-slide')); // Get slides, not just images
+  if (!track) return;
+
+  const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+  if (!slides.length) return;
+
   const prevBtn = carousel.querySelector('.carousel-prev');
   const nextBtn = carousel.querySelector('.carousel-next');
   const dotsContainer = carousel.querySelector('.carousel-dots');
   const autoplayMs = parseInt(carousel.dataset.autoplay || '0', 10);
+
   let index = 0;
   let intervalId = null;
+
+  // Make every slide as wide as the carousel and line them up side by side
+  function layout() {
+    const width = carousel.clientWidth;
+    slides.forEach((slide) => {
+      slide.style.width = `${width}px`;
+      if (window.innerWidth <= 768) {
+        slide.style.height = 'auto';
+      }
+    });
+    track.style.width = `${width * slides.length}px`;
+  }
 
   function renderDots() {
     if (!dotsContainer) return;
@@ -105,45 +119,38 @@ function initCarousel(carousel) {
 
   function goTo(i) {
     index = (i + slides.length) % slides.length;
-    const offset = -index * carousel.clientWidth; // Use a negative value for leftward movement
-    track.style.transform = `translateX(${offset}px)`;
+    track.style.transform = `translateX(${-index * carousel.clientWidth}px)`;
     renderDots();
   }
 
-  function onResize() {
-    layout(); // Recalculate layout on resize
-    goTo(index);
+  function startAutoplay() {
+    if (autoplayMs > 0 && slides.length > 1 && !intervalId) {
+      intervalId = setInterval(() => goTo(index + 1), autoplayMs);
+    }
+  }
+
+  function stopAutoplay() {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
   }
 
   prevBtn?.addEventListener('click', () => goTo(index - 1));
   nextBtn?.addEventListener('click', () => goTo(index + 1));
-  window.addEventListener('resize', onResize);
 
-  if (autoplayMs > 0) {
-    intervalId = setInterval(() => goTo(index + 1), autoplayMs);
-    carousel.addEventListener('mouseenter', () => intervalId && clearInterval(intervalId));
-    carousel.addEventListener('mouseleave', () => { intervalId = setInterval(() => goTo(index + 1), autoplayMs); });
-  }
+  window.addEventListener('resize', () => {
+    layout();
+    goTo(index);
+  });
 
-  // Ensure images sit side-by-side with equal width
-  function layout() {
-    const width = carousel.clientWidth;
-    slides.forEach((slide) => { 
-      slide.style.width = `${width}px`;
-      // Ensure slide height is auto for responsive behavior
-      if (window.innerWidth <= 768) {
-        slide.style.height = 'auto';
-      }
-    });
-    track.style.width = `${width * slides.length}px`;
-  }
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
 
   layout();
   renderDots();
   goTo(0);
+  startAutoplay();
 }
 
 document.querySelectorAll('.carousel').forEach(initCarousel);
-
-
-

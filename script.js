@@ -70,10 +70,57 @@ if (reveals.length && 'IntersectionObserver' in window) {
 }
 
 // ===============================
-// Contact form
-// The form posts directly to FormSubmit (see the action attribute in index.html),
-// so no JavaScript is needed here.
+// Contact form (sends through FormSubmit without leaving the page)
+// If JavaScript fails, the form still posts normally via its action attribute.
 // ===============================
+const contactForm = document.getElementById('contactForm');
+const sendBtn = document.getElementById('sendBtn');
+const formStatus = document.getElementById('formStatus');
+const CONTACT_EMAIL = 'nsnrsteffi19@gmail.com';
+
+function showStatus(message, type) {
+  if (!formStatus) return;
+  formStatus.textContent = message;
+  formStatus.className = 'form-status ' + type;
+}
+
+if (contactForm && sendBtn) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Spam trap: bots fill hidden fields, people do not
+    const honey = contactForm.querySelector('input[name="_honey"]');
+    if (honey && honey.value) return;
+
+    const originalLabel = sendBtn.textContent;
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Sending...';
+    showStatus('', '');
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/' + CONTACT_EMAIL, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(contactForm),
+      });
+      const result = await response.json().catch(() => ({}));
+      const ok = response.ok && (result.success === true || result.success === 'true');
+
+      if (!ok) throw new Error('Send failed');
+
+      contactForm.reset();
+      showStatus('Message sent. Thank you, I will get back to you soon.', 'success');
+    } catch (err) {
+      showStatus(
+        'Your message could not be sent. Please email me directly at ' + CONTACT_EMAIL + '.',
+        'error'
+      );
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = originalLabel;
+    }
+  });
+}
 
 // ===============================
 // Lightweight carousel

@@ -1369,3 +1369,35 @@ body { overflow-x: hidden; }
   color: #ffffff;
 }ffff;
 }
+/* ===== Experience: sub-headings inside cards ===== */
+.sub-heading {
+  color: #fca5a5;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem 0;
+}
+.card .tech-tags { margin-bottom: 0; margin-top: 0.5rem; }
+
+/* ===== Contact form status message ===== */
+.form-status { margin: 0; min-height: 1.5rem; font-size: 0.95rem; line-height: 1.5; }
+.form-status.success {
+  padding: 0.75rem 1rem;
+  background: rgba(22, 101, 52, 0.3);
+  border: 1px solid #166534;
+  border-radius: 0.5rem;
+  color: #bbf7d0;
+}
+.form-status.error {
+  padding: 0.75rem 1rem;
+  background: rgba(127, 29, 29, 0.35);
+  border: 1px solid #b91c1c;
+  border-radius: 0.5rem;
+  color: #fecaca;
+}
+.btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+/* ===== Footer links ===== */
+.footer-line { margin: 0 0 0.75rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem 0.75rem; justify-content: center; }
+.footer-link { color: #fecaca; text-decoration: none; }
+.footer-link:hover { color: #ffffff; text-decoration: underline; }
+.footer-sep { color: #7f1d1d; }
